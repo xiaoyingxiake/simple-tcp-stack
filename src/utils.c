@@ -1,7 +1,7 @@
 #include "utils.h"
 
-uint16_t checksum(void *data, int len) {
-    uint16_t *ptr = data;
+uint16_t checksum(const void *data, int len) {
+    const uint16_t *ptr = data;
     uint32_t sum = 0;
     while (len > 1) { sum += *ptr++; len -= 2; }
     if (len == 1) sum += *(uint8_t *)ptr;

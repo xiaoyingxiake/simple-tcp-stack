@@ -2,6 +2,19 @@
 #define NET_H
 
 #include <stdint.h>
+/* Ethernet */
+  #define ETH_FRAME_MAX   1514
+  #define ETH_TYPE_IP     0x0800
+  #define ETH_TYPE_ARP    0x0806
+
+ #define IP_VERSION_4    0x40
+  #define IP_DEFAULT_TTL  64
+  #define IP_PROTO_ICMP   1
+  #define IP_PROTO_UDP    17
+
+#define ARP_CACHE_TIMEOUT  60
+  #define ARP_CACHE_MAX      16
+
 
 struct eth_hdr {
     uint8_t  dst[6];

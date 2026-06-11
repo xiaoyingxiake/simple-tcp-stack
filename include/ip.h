@@ -2,7 +2,8 @@
 #define IP_H
 
 #include <stdint.h>
+#include "net.h"
 
-void handle_ip(int fd, uint8_t *frame, int len);
+int handle_ip(uint8_t *frame, int len);
 
 #endif

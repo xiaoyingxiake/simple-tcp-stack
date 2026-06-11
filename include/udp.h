@@ -3,6 +3,6 @@
 
 #include <stdint.h>
 
-void handle_udp(int fd, uint8_t *frame, int len);
+int handle_udp(uint8_t *frame, int len);
 
 #endif

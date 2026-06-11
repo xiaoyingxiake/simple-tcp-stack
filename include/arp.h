@@ -2,7 +2,9 @@
 #define ARP_H
 
 #include <stdint.h>
+#include "net.h"
 
-void handle_arp(int fd, uint8_t *frame, int len);
+
+int handle_arp(uint8_t *frame, int len);
 
 #endif

@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <time.h>
 
-#define LOG_INFO  "INFO "
+#define LOG_INFO  "INFO"
 #define LOG_DEBUG "DEBUG"
 #define LOG_ERROR "ERROR"
 

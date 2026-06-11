@@ -3,8 +3,8 @@
 
 #include <stdint.h>
 
-void handle_icmp(int fd, uint8_t *frame, int len);
+int handle_icmp( uint8_t *frame, int len);
 
-void icmp_unreachable(int fd, uint8_t *frame);
+int icmp_unreachable(uint8_t *frame);
 
 #endif

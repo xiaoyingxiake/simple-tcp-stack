@@ -7,7 +7,7 @@
 #include "udp.h"
 #include "utils.h"
 
-void handle_udp(int fd, uint8_t *frame, int len) {
+int handle_udp(uint8_t *frame, int len) {
     struct eth_hdr *eth = (struct eth_hdr *)frame;
     struct ip_hdr  *ip  = (struct ip_hdr *)(frame + sizeof(struct eth_hdr));
     int ip_hlen = (ip->ver_ihl & 0x0f) * 4;
@@ -30,6 +30,5 @@ void handle_udp(int fd, uint8_t *frame, int len) {
     udp->dst_port = udp->src_port;
     udp->src_port = tmp_port;
     udp->check = 0;
-    write(fd, frame, len);
-    log(LOG_INFO,"UDP Echo 已发送\n");
-}
+    return len;
+    }

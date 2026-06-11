@@ -53,3 +53,8 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Project binaries
+netstack
+tap_listen
+test/test_icmp
